@@ -9,18 +9,22 @@ body {
 </style>    
     
     <script>
-     
- spectrum();
- 
- function spectrum(){
-    var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-    $('#div').animate( { backgroundColor: hue }, 1000);
-    spectrum();
- }
- 
-});
-        
-        $('body').animate( { backgroundColor: hue }, 1000);
+(function() { // Wrap in a function to not pollute the global scope
+
+  // Colors. These are the color names you can use in CSS. You could use color codes
+  // like #rrggbb as well.
+  var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+  var colorIndex = 0;
+
+  setInterval(function(){
+    // Set the color and increment the index.
+    document.body.style.backgroundColor = colors[colorIndex++];
+
+    // Wrap the index if it goes past the length of the array. % is modulo.
+    colorIndex %= colors.length;
+    }, 350);
+})();
     </script>
 </head>
 <body>
