@@ -2,8 +2,8 @@
 <head>
 <style>
 body {
-    background-image: url("http://i.imgur.com/TyPajoX.gif");
-    background-repeat: repeat;
+    ackground-image: url("http://i.imgur.com/TyPajoX.gif");
+    ackground-repeat: repeat;
 }     
 </style>    
     
@@ -22,38 +22,15 @@ body {
 })();
     </script>
     <script>
-main();
-
-
-function main() {
-
-  var parent = document.body;
-
-  var delay = 1000;
-
-  var i = 0;
-
-  
-
-  setInterval(function() {
-
-    i++;
-
-    
-
-    var d = document.createElement('div');
-
-    d.innerHTML = 'This is the line ' + i +
-
-      ' of the longest webpage in the world.';
-
-    
-
-    parent.appendChild(d);
-
-  }, delay);
-
+function multiString(text, count){
+    var ret = "";
+    for(var i = 0; i < count; i++){
+        ret += text;
+    }
+    return ret;
 }
+
+var myString = multiString("&nbsp;", 50);
 </script>
 </head>
 <body>
