@@ -5,30 +5,56 @@ body {
     background-image: url("http://i.imgur.com/TyPajoX.gif");
     background-repeat: repeat;
 }     
-
 </style>    
     
     <script>
 (function() { // Wrap in a function to not pollute the global scope
-
   // Colors. These are the color names you can use in CSS. You could use color codes
   // like #rrggbb as well.
   var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
-
   var colorIndex = 0;
-
   setInterval(function(){
     // Set the color and increment the index.
     document.body.style.backgroundColor = colors[colorIndex++];
-
     // Wrap the index if it goes past the length of the array. % is modulo.
     colorIndex %= colors.length;
     }, 350);
 })();
     </script>
-    <script></script>
+    <script>
+main();
 
-    <embed loop="true" src="http://www.mccarthyboas.com/wavs/frogs.wav" hidden="true" type="video/quicktime"></embed>
+
+function main() {
+
+  var parent = document.body;
+
+  var delay = 1000;
+
+  var i = 0;
+
+  
+
+  setInterval(function() {
+
+    i++;
+
+    
+
+    var d = document.createElement('div');
+
+    d.innerHTML = 'This is the line ' + i +
+
+      ' of the longest webpage in the world.';
+
+    
+
+    parent.appendChild(d);
+
+  }, delay);
+
+}
+</script>
 </head>
 <body>
     
